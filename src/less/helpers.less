@@ -1,0 +1,29 @@
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+input {
+ 	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid @border-grey;
+}
+button, input, textarea {
+    outline: 0;
+}
+ input:focus { 
+ 	outline: none; 
+ 	color: @black;
+ }
+ .service-header {
+	margin-bottom: 5rem;
+	margin-top: 10rem;
+	color: @black;
+}
+@media (min-width: 0px) and (max-width: 480px) {
+	 .service-header {
+		margin-bottom: 25px;
+		margin-top: 50px;
+		font-size: 1.5rem !important;
+	}
+}

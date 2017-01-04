@@ -1,0 +1,104 @@
+/* provide screen */
+.provide {
+	padding-bottom: 15rem;
+	.tabs_menu {
+		list-style: none;
+		-webkit-padding-start: 10px;
+		.tabs_menu_item {
+			background-color: @white;
+			margin-bottom: 15px;
+			width: 120px;
+			position: relative !important;
+			left: 0 !important;
+			text-align: right;
+			border-left: 1rem solid @base-blue;
+		}
+		li.active > a,
+		li.active > a:hover,
+		li.active > a:focus{
+			display: block;
+			background-color: @base-light-blue;  
+			color: @white;
+			text-decoration: none;
+		} 
+	}
+
+	.provide-tab {
+		&-content {
+			h3 {
+				margin-top: 0;
+			}
+			h3, p {
+				color: @black;
+				text-align: left;
+			}
+			p {
+				font-size: 1.5rem;
+				margin-bottom: 4rem;
+			}
+		}
+	}
+
+	.tab-form {
+		margin: 0;
+		text-align: left;
+		background-color: @white;
+		border: 7px solid @border-grey;
+		border-radius: 5px;
+		width: 100%;
+		padding: 15px;
+		color: @black;
+		&-header {
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			margin-bottom: 30px;
+		}
+		&-label {
+			font-size: 1rem;
+		}
+		&-polity {
+			text-decoration: none;
+			color: @black;
+		}
+		.i-phone {
+			width: 100%;
+			font-size: 1.25rem;
+			background: url(../img/phone-receiver.png) no-repeat scroll 10px 50%;
+			padding-left:30px;
+		}
+	}
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+	.tabs_menu {
+		padding: 0;
+		padding-left: 1.5rem;
+	}
+	.tabs_menu_item {
+		display: block !important;
+	    border-left: 0 !important;
+	    border-bottom: 0.25rem solid @base-blue;
+	 	width: auto;
+	    text-align: left !important;
+	}
+	li.active > a,
+	li.active > a:hover,
+	li.active > a:focus {
+		&:before {
+			content: "\f00c";
+			  font-family: FontAwesome;
+			  display: inline-block;
+			  margin-left: -1.5rem; 
+			  width: 1.5rem;
+			  color: @black;
+		}
+	} 
+	.provide {
+		padding-bottom: 5rem;
+	}
+	.provide-tab {
+		p {
+			text-align: justify !important;
+		}
+	}
+}
