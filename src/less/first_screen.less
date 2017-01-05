@@ -1,19 +1,29 @@
 .first_screen {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
 	background: url(../img/first-screen-bg.jpg) no-repeat @grey;
 	background-position: center bottom;
 	background-size: cover;
 	color: @white;
 	padding-top: 20vh;
-	min-height: 100vh;
-	height: 100%;
-	box-shadow:0 0 0 100vw rgba(0, 0, 0, 0.33) inset;
-
+	min-height: 90vh;
+	box-shadow:0 0 0 100vw rgba(0, 0, 0, 0.75) inset;
+	.fed-law {
+	display: block;
+	}
+	.fed-law p {
+		display: inline-block;
+		color: #ffd200;
+		border-bottom: 2px dashed #ffd200;
+		-webkit-transition: 500ms;
+		-o-transition: 500ms;
+		transition: 500ms;
+	}
+	.fed-law p:hover {
+		color: #CA9C06;
+		border-bottom: 2px dashed #CA9C06;
+		-webkit-transition: 500ms;
+		-o-transition: 500ms;
+		transition: 500ms;
+	}
 	ul.fs-list {
 		padding: 0;
 		li.fs-item {
@@ -21,6 +31,7 @@
 			text-transform: uppercase;
 			text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
 			font-size: 1.5rem;
+			.ubuntu-bold;
 			&:before {
 				content: "\f00c";
 			    font-family: FontAwesome;
@@ -33,6 +44,7 @@
 	}
 	.fs-free {
 		text-transform: uppercase;
+		.ubuntu-bold;
 		font-size: 2rem;
 		color: @white;
 	}
@@ -48,9 +60,11 @@
 		&-header {
 			text-transform: uppercase;
 			font-size: 1.5rem;
+			.ubuntu-bold;
 			margin-bottom: 30px;
 		}
 		&-label {
+			.ubuntu-bold;
 			font-size: 1rem;
 		}
 		&-polity {
@@ -63,73 +77,29 @@
 			background: url(../img/phone-receiver.png) no-repeat scroll 10px 50%;
 			padding-left:30px;
 		}
-	}
-}
-
-
-.blue-line {
-	align-self: flex-start;
-	max-width: 100% !important;
-	min-width: 100% !important;
-	padding: 0 !important;
-	margin: 0 !important;
-	background-color: fade(@base-dark-blue, 50%);
-}
-
-.mobile-slider {
-	&-item {
-		outline: none;
-		&-box {
-			// padding: 15px;
-			margin-left: 20px;
-			margin-right: 20px;
-			&-shadow {
-				.mb-label {
-					font-size: 1.5rem;
-				}
-				p {
-
-					color: @white;
-					font-size: 1.75rem;			
-				}
-			}
+		.i-name {
+			width: 100%;
+			font-size: 1.25rem;
+			background: url(../img/person.png) no-repeat scroll 10px 50%;
+			padding-left:30px;
 		}
 	}
-	&-arrows {
-		position: absolute;
-		top: 50%;
-		height: 50px;
-		width: 50px;
-		transform: translateY(-9px);
-		font-size: 2rem !important;
-		padding: 16px;
-		text-align: center;	
-		color: @arrows-grey;
-		&:hover {
-			color: @black;
-			cursor: pointer;
-		}
-	}
-	&-arrow-left {
-		left: -10px;
-		z-index: 300;
-	}
-	&-arrow-right {
-		right: -10px !important;
-		padding-left: 18px;
-	}
 }
-
-
 @media (min-width: 0px) and (max-width: 480px) {
 	.first_screen { 
 		padding-top: 5vh;
 		padding-bottom: 5vh;
 		height: 100vh;
+		.fed-law {
+			text-align: center;
+		}
 	}
 	span.fs-free {
 		text-align: center !important;
 		display: inherit;
+	}
+	.fs-helper {
+		margin-top: 1vh;
 	}
 	li.fs-item, .fs-free {
 		font-size: 0.75rem !important;

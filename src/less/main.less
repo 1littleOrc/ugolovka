@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=cyrillic');
 
 //= slick-theme.less
 //= variables.less
@@ -8,7 +8,7 @@
 //= callback.less
 //= modal.less
 
-@base-fonts-p: 'Fira Mono', monospace;
+@base-fonts-p: 'Ubuntu', sans-serif;
 @base-fonts-h: 'Open Sans', sans-serif;
 body {
 	font-family: @base-fonts-p;
@@ -20,6 +20,19 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 800;
 	color: @base-dark-blue;
 }
+.ubuntu-bold {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 800;
+}
+.ubuntu-medium {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+}
+.ubuntu-reg {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+}
+
 
 @media (min-width: 0px) and (max-width: 992px) {
 	h1 {
