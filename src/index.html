@@ -33,6 +33,7 @@
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	 <script src="vendor/bootstrap.js"></script>
 	 <script src="vendor/parallax.min.js"></script>
+   <script src="vendor/jquery.maskedinput.min.js"></script>
 	<link rel="stylesheet" href="js/main.js">
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
  <script type="text/javascript">
@@ -230,5 +231,28 @@
 			});
 		});
 	</script>
+    <script>
+    $(document).ready(function() {
+      $(".ajaxform").submit(function() {
+        $.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).find("input").val("");
+          alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+          // $("#thanks-modal").modal("show");
+          $(".ajaxform").trigger("reset");
+        });
+        return false;
+      });
+      
+    });
+  </script>
+  <script>
+    jQuery(function($){
+      $(".form-phone, .i-phone").mask("+7 (999) 999-99-99");
+    });
+  </script>
 </body>
 </html>

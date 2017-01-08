@@ -1,12 +1,13 @@
-button:focus {outline:0;}
+button:focus, button:active {outline:0;}
 .btn {
 	display: block;
 	color: @white;
 	width: 100%;
-	.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
-		outline: none; 
+	&:focus{
+		outline: 0;
 		color: @white;
 	}
+	
 }
 .btn-yellow {
 	text-align: left;
