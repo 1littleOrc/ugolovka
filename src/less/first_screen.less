@@ -1,4 +1,10 @@
 .first_screen {
+	display: flex;
+ 	flex-direction: column;
+ 	flex-wrap: nowrap;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	align-content: stretch;
 	background: url(../img/first-screen-bg.jpg) no-repeat @grey;
 	background-position: center bottom;
 	background-size: cover;
@@ -47,6 +53,8 @@
 		.ubuntu-bold;
 		font-size: 2rem;
 		color: @white;
+		padding: 0 !important;
+
 	}
 	.fs-form {
 		right: 0;
@@ -84,38 +92,68 @@
 			padding-left:30px;
 		}
 	}
+	.blue-line {
+ 		align-self: flex-start;
+ 		max-width: 100% !important;
+ 		min-width: 100% !important;
+ 		margin: 0 !important;
+ 		background-color: fade(@base-dark-blue, 50%);
+ 		padding: 3rem;
+ 		text-align: center;
+ 		.ubuntu-bold;
+ 		font-size: 3rem;	
+ 	}
 }
 @media (min-width: 0px) and (max-width: 480px) {
 	.first_screen { 
-		padding-top: 5vh;
-		padding-bottom: 5vh;
-		height: 100vh;
+		padding-top: 2.5vh !important;
+		max-height: 20vh !important;
 		.fed-law {
 			text-align: center;
+			font-size: 1.25rem;
+			margin-bottom: 5vh;
 		}
 	}
 	span.fs-free {
 		text-align: center !important;
 		display: inherit;
-	}
-	.fs-helper {
-		margin-top: 1vh;
+		font-size: 1.5rem !important;
 	}
 	li.fs-item, .fs-free {
 		font-size: 0.75rem !important;
 	}
-	.fs-form {
-		right: auto !important;
-		margin: 0 auto!important;
-		position: static !important;
-		width: 90% !important;
-		max-width: 300px;
-		&-header {
-			font-size: 1rem !important;
-			margin-bottom: 15px !important;
-		}
-		&-label {
-			font-size: 0.75rem !important;
+	.blue-line {
+		font-size: 1.25rem !important;
+		padding: 1rem !important;
+	}
+}
+@media (min-width: 481px) and (max-width: 768px) {
+	.first_screen {
+		padding-top: 10vh;
+		max-height: 20vh !important;
+			.fs-free {
+				text-align: center;
+			}
+		.fed-law {
+			text-align: center;
+			font-size: 1.5rem;
+			margin-bottom: 5vh;
 		}
 	}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+	.first_screen {
+		padding-top: 10vh;
+		max-height: 20vh !important;
+			.fs-free {
+				text-align: center;
+
+			}
+		.fed-law {
+			text-align: center;
+			font-size: 1.5rem;
+			margin-bottom: 5vh;
+		}
+	}	
 }
