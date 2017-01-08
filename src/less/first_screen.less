@@ -98,12 +98,56 @@
  		min-width: 100% !important;
  		margin: 0 !important;
  		background-color: fade(@base-dark-blue, 50%);
- 		padding: 3rem;
+ 		padding: 0rem;
  		text-align: center;
  		.ubuntu-bold;
- 		font-size: 3rem;	
+ 		font-size: 2rem;	
  	}
+ 	.mobile-slider {
+	&-item {
+		outline: none;
+		&-box {
+			margin-left: 20px;
+			margin-right: 20px;
+			&-shadow {
+				.mb-label {
+					font-size: 1.5rem;
+				}
+				p {
+					color: @white;
+					font-size: 1.75rem;			
+				}
+			}
+		}
+	}
+	&-arrows {
+		position: absolute;
+		top: 50%;
+		height: 50px;
+		width: 50px;
+		transform: translateY(-9px);
+		font-size: 2rem !important;
+		padding: 16px;
+		text-align: center;	
+		color: @arrows-grey;
+		&:hover {
+			color: @white;
+			cursor: pointer;
+		}
+	}
+	&-arrow-left {
+		left: -10px;
+		z-index: 300;
+	}
+	&-arrow-right {
+		right: -10px !important;
+		padding-left: 18px;
+	}
 }
+}
+
+
+
 @media (min-width: 0px) and (max-width: 480px) {
 	.first_screen { 
 		padding-top: 2.5vh !important;
@@ -127,6 +171,9 @@
 		padding: 1rem !important;
 	}
 }
+
+
+
 @media (min-width: 481px) and (max-width: 768px) {
 	.first_screen {
 		padding-top: 10vh;
