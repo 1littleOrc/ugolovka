@@ -69,20 +69,33 @@
         <div class="hidden-xs hidden-sm hidden-md col-lg-4">
           <div class="tab-form">
             <div class="row">
+              <form class="ajaxform">
                       <div class="col-xs-12 tab-form-header">
                         Отправьте заявку и получите бесплатную консультацию
                       </div>
                       <div class="col-xs-12">
                         <span class="tab-form-label">
+                          Ваше Имя
+                        </span>
+                        <input type="text" name="name" class="i-name" placeholder="Имя" required>
+                      </div>
+                      <div class="col-xs-12">
+                        <span class="tab-form-label">
                           Номер телефона
                         </span>
-                        <input type="phone" class="i-phone">
+                        <input type="tel" pattern="(\+?\d[- .]*){7,13}" name="phone" class="i-phone" placeholder="+7(925)255-25-25" required>
+                      </div>
+                      <div class="col-xs-12">
+                        <span class="tab-form-label">
+                          Текст сообщения
+                        </span><br/>
+                        <textarea name="textMsg" class="textMsg" rows="2" placeholder="Текст сообщения"></textarea>
                       </div>
                       <div class="col-xs-12">
                         <br>
-                        <a href="#" class="btn btn-green">
-                          Отправьте заявку&nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i>
-                        </a>
+                        <button type="submit" class='btn btn-green'>
+                          Получить консультацию&nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i>
+                        </button>
                       </div>
                       <div class="col-xs-12 text-center">
                         <br>
@@ -92,6 +105,7 @@
                         </a>
                       </div>
                     </div>
+            </form>
         </div>
       </div>
   </section>

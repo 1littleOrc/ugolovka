@@ -12,18 +12,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	
+<noindex><script async src="data:text/javascript;charset=utf-8;base64,ZnVuY3Rpb24gbG9hZHNjcmlwdChlLHQpe3ZhciBuPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO24uc3JjPSIvL2xwdHJhY2tlci5ydS9hcGkvIitlO24ub25yZWFkeXN0YXRlY2hhbmdlPXQ7bi5vbmxvYWQ9dDtkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKG4pO3JldHVybiAxfXZhciBpbml0X2xzdGF0cz1mdW5jdGlvbigpe2xzdGF0cy5zaXRlX2lkPTMxMTk0O2xzdGF0cy5yZWZlcmVyKCl9O3ZhciBqcXVlcnlfbHN0YXRzPWZ1bmN0aW9uKCl7alFzdGF0Lm5vQ29uZmxpY3QoKTtsb2Fkc2NyaXB0KCJzdGF0c19hdXRvLmpzIixpbml0X2xzdGF0cyl9O2xvYWRzY3JpcHQoImpxdWVyeS0xLjEwLjIubWluLmpzIixqcXVlcnlfbHN0YXRzKQ=="></script></noindex>
 </head>
 <body>
 	//= parts/top_line.html
 	//= parts/first_screen.html
-  //= parts/main-slider.html
+  //= parts/about.html
 	//= parts/our-plus.html
   //= parts/tabs.html
-  //= parts/slider-section.html
 	//= parts/horizontal-form.html
+  //= parts/main-slider.html
 	//= parts/map.html
   //= parts/footer.html
-	//= parts/callback.html
 	//= parts/modal.html
 
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
@@ -33,7 +33,7 @@
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	 <script src="vendor/bootstrap.js"></script>
 	 <script src="vendor/parallax.min.js"></script>
-   <script src="vendor/jquery.maskedinput.min.js"></script>
+   <!-- <script src="vendor/validatr.min.js"></script> -->
 	<link rel="stylesheet" href="js/main.js">
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
  <script type="text/javascript">
@@ -232,26 +232,42 @@
 		});
 	</script>
     <script>
-    $(document).ready(function() {
+    // $(document).ready(function() {
+    //   $(".ajaxform").submit(function() {
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "mail.php",
+    //       data: $(this).serialize()
+    //     }).done(function() {
+    //       $(this).find("input").val("");
+    //       alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+    //       // $("#thanks-modal").modal("show");
+    //       $(".ajaxform").trigger("reset");
+    //     });
+    //     return false;
+    //   });
+    // });
+  </script>
+  <script>
+  $(document).ready(function() {
       $(".ajaxform").submit(function() {
-        $.ajax({
-          type: "POST",
-          url: "mail.php",
-          data: $(this).serialize()
-        }).done(function() {
-          $(this).find("input").val("");
           alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-          // $("#thanks-modal").modal("show");
-          $(".ajaxform").trigger("reset");
-        });
-        return false;
+          // $("#thank_you_modal").modal("show");
+          // $(".ajaxform").trigger("reset");
       });
-      
     });
   </script>
   <script>
-    jQuery(function($){
-      $(".form-phone, .i-phone").mask("+7 (999) 999-99-99");
+    $(document).on('click', '.more-btn', function () {
+      if( $('.rw-more').css('display') == 'none') {
+          $(".rw-more").css("display", "block");
+          $('a.more-btn').text('Скрыть часть дель');
+      }
+      else {
+          $(".rw-more").css("display", "none");
+          $('a.more-btn').text('Посмотреть больше дел');
+      }
+      
     });
   </script>
 </body>
